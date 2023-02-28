@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Frontend Mentor | Shortly URL shortening API Challenge</title>
+    <script defer src="./app.js"></script>
+    <!-- Ionicons icon -->
+    <script
+      defer
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      defer
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <ul>
+        <li>Features</li>
+        <li>Pricing</li>
+        <li>Resources</li>
+      </ul>
+      <ul>
+        <li>Login</li>
+        <li><b>Sign Up</b></li>
+      </ul>
+      <div id="burgermenu">
+        <div class="burgermenu__container">
+          <ul>
+            <li>Features</li>
+            <li>Pricing</li>
+            <li>Resources</li>
+            <li>Login</li>
+            <li><b>Sign Up</b></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="ShortInfoObject">
+        <div>
+          <h1>More than just shorter links</h1>
+          <div>
+            Build your brand’s recognition and get detailed insights on how your
+            links are performing.
+          </div>
+          <button><b>Get Started</b></button>
+        </div>
+        <img src="./images/illustration-working.svg" alt="" />
+      </section>
+      <section class="link_shredder">
+        <form action="" id="link_shredder__form" pole_status>
+          <input
+            type="text"
+            id="link_shredder__typetext"
+            placeholder="Shorten a link here..."
+          />
+          <button>Shorten It!</button>
+        </form>
+      </section>
+      <section id="ShortLinkContainer">
+        <ul></ul>
+      </section>
+      <section class="AdvancedStatistics">
+        <b>Advanced Statistics</b>
+        <div>
+          Track how your links are performing across the web with our advanced
+          statistics dashboard.
+        </div>
+      </section>
+      <section id="FullStateInfo">
+        <div class="FullStateInfo__container">
+          <h2>Brand Recognition</h2>
+          <div>
+            Boost your brand recognition with each click. Generic links don’t
+            mean a thing. Branded links help instil confidence in your content.
+          </div>
+        </div>
+        <div class="FullStateInfo__container">
+          <h2>Detailed Records</h2>
+          <div>
+            Gain insights into who is clicking your links. Knowing when and
+            where people engage with your content helps inform better decisions.
+          </div>
+        </div>
+        <div class="FullStateInfo__container">
+          <h2>Fully Customizable</h2>
+          <div>
+            Improve brand awareness and content discoverability through
+            customizable links, supercharging audience engagement.
+          </div>
+        </div>
+      </section>
+    </main>
+    <section id="BoostLinkButton">
+      <h2>Boost your links today</h2>
+      <button><b>Get Started</b></button>
+    </section>
+    <footer>
+      <div>
+        <img src="./images/logo.svg" alt="" />
+        <ul>
+          <li><b>Features</b></li>
+          <li>Link Shortening</li>
+          <li>Branded Links</li>
+          <li>Analytics</li>
+        </ul>
+        <ul>
+          <li><b>Resources</b></li>
+          <li>Blog</li>
+          <li>Developers</li>
+          <li>Support</li>
+        </ul>
+        <ul>
+          <li><b>Company</b></li>
+          <li>About</li>
+          <li>Our Team</li>
+          <li>Careers</li>
+          <li>Contact</li>
+        </ul>
+        <ul>
+          <li>
+            <a
+              href="https://www.facebook.com/profile.php?id=100008296452572"
+              target="_blank"
+            >
+              <img src="./images/icon-facebook.svg" alt="" />
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com/karanelus" target="_blank">
+              <img src="./images/icon-twitter.svg" alt="" />
+            </a>
+          </li>
+          <li>
+            <a href="https://www.pinterest.com/Karanelus/" target="_blank">
+              <img src="./images/icon-pinterest.svg" alt="" />
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/karanelus/" target="_blank">
+              <img src="./images/icon-instagram.svg" alt="" />
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+    <dialog id="ErrorMessage">
+      <h2>My goddness</h2>
+      <div>The inputted IP address is wrong or doesn't exist</div>
+      <button id="closeButton">Close</button>
+    </dialog>
+  </body>
+</html>
