@@ -42,7 +42,7 @@ video {
   background: transparent;
   border: none;
   border-radius: 0.25rem;
-  /* box-shadow: inset 0px 0px 2px 0.25px rgba(66, 68, 90, 1); */
+  box-shadow: inset 0px 0px 2px 0.25px rgba(66, 68, 90, 1);
   width: 0.7rem;
 }
 
@@ -148,7 +148,7 @@ header ul:nth-child(2) li:nth-child(2):hover {
   background: var(--Cyan_hover);
 }
 
-div#burgermenu {
+#burgermenu {
   display: none;
 }
 
@@ -262,11 +262,11 @@ div#burgermenu {
   padding: 0 1rem;
 }
 
-section#ShortLinkContainer ul {
+#ShortLinkContainer ul {
   list-style: none;
 }
 
-section#ShortLinkContainer ul li {
+#ShortLinkContainer ul li {
   background-color: var(--White);
   border-radius: 1rem;
   display: grid;
@@ -277,14 +277,14 @@ section#ShortLinkContainer ul li {
   position: relative;
 }
 
-section#ShortLinkContainer ul li div {
+#ShortLinkContainer ul li div {
   padding: 0.5rem;
   color: var(--Very_Dark_Violet);
   display: flex;
   justify-content: space-between;
 }
 
-section#ShortLinkContainer ul li div span {
+#ShortLinkContainer ul li div span {
   --max-stroke: 1;
   display: -webkit-box;
   overflow: hidden;
@@ -292,11 +292,11 @@ section#ShortLinkContainer ul li div span {
   -webkit-line-clamp: var(--max-stroke);
 }
 
-section#ShortLinkContainer ul li div span:not(:first-child) {
+#ShortLinkContainer ul li div span:not(:first-child) {
   color: var(--Cyan);
 }
 
-section#ShortLinkContainer ul li button {
+#ShortLinkContainer ul li button {
   border: none;
   border-radius: 0.5rem;
   background: var(--Cyan);
@@ -309,21 +309,21 @@ section#ShortLinkContainer ul li button {
   transition: background 0.2714s linear;
 }
 
-section#ShortLinkContainer ul li button[copy_status="1"] {
+#ShortLinkContainer ul li button[copy_status="1"] {
   background: var(--Dark_Violet);
   padding: 0.5rem 1.25rem;
 }
 
-section#ShortLinkContainer ul li button[copy_status="1"]:hover {
+#ShortLinkContainer ul li button[copy_status="1"]:hover {
   background: var(--Dark_Violet);
 }
 
-section#ShortLinkContainer ul li button:hover {
+#ShortLinkContainer ul li button:hover {
   background: var(--Cyan_hover);
   cursor: pointer;
 }
 
-section#ShortLinkContainer ul li div.closeButton {
+#ShortLinkContainer ul li div.closeButton {
   aspect-ratio: 1/1;
   background: url("./images/close.png");
   background-size: cover;
@@ -338,7 +338,7 @@ section#ShortLinkContainer ul li div.closeButton {
   width: 1.75rem;
 }
 
-section#ShortLinkContainer ul li div.closeButton:hover {
+#ShortLinkContainer ul li div.closeButton:hover {
   background-color: var(--Red_hover);
   cursor: pointer;
 }
@@ -361,7 +361,7 @@ section#ShortLinkContainer ul li div.closeButton:hover {
 
 /* 006 _ FullStateInfo */
 
-section#FullStateInfo {
+#FullStateInfo {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 2rem;
@@ -370,7 +370,7 @@ section#FullStateInfo {
   padding: 1rem;
 }
 
-section#FullStateInfo::before {
+#FullStateInfo::before {
   background-color: var(--Cyan);
   content: "";
   height: 0.5rem;
@@ -386,7 +386,7 @@ section#FullStateInfo::before {
   position: relative;
 }
 
-section#FullStateInfo div h2 {
+#FullStateInfo div h2 {
   font-size: calc(var(--Font_size) * 1.5);
   color: var(--Very_Dark_Violet);
   margin: 0 0 1rem;
@@ -434,7 +434,7 @@ section#FullStateInfo div h2 {
 
 /* 007 _ BoostLinkButton */
 
-section#BoostLinkButton {
+#BoostLinkButton {
   align-items: center;
   background: url("./images/bg-boost-desktop.svg");
   background-color: var(--Dark_Violet);
@@ -446,12 +446,12 @@ section#BoostLinkButton {
   width: 100vw;
 }
 
-section#BoostLinkButton h2 {
+#BoostLinkButton h2 {
   color: var(--White);
   font-size: calc(var(--Font_size) * 1.5);
 }
 
-section#BoostLinkButton button {
+#BoostLinkButton button {
   background-color: var(--Cyan);
   border: none;
   border-radius: 4rem;
@@ -463,7 +463,7 @@ section#BoostLinkButton button {
   transition: background 0.2714s linear;
 }
 
-section#BoostLinkButton button:hover {
+#BoostLinkButton button:hover {
   background: var(--Cyan_hover);
   cursor: pointer;
 }
@@ -560,7 +560,7 @@ footer div ul:last-child li:hover img {
     display: none;
   }
 
-  div#burgermenu {
+  #burgermenu {
     background: var(--Grayish_Violet);
     border-radius: 1rem;
     display: block;
@@ -571,7 +571,7 @@ footer div ul:last-child li:hover img {
     width: 2rem;
   }
 
-  div#burgermenu::before {
+  #burgermenu::before {
     background: var(--Grayish_Violet);
     border-radius: 1rem;
     content: "";
@@ -582,11 +582,11 @@ footer div ul:last-child li:hover img {
     width: 2rem;
   }
 
-  div#burgermenu.burgermenu--open::before {
+  #burgermenu.burgermenu--open::before {
     transform: rotate(45deg);
   }
 
-  div#burgermenu::after {
+  #burgermenu::after {
     background: var(--Grayish_Violet);
     border-radius: 1rem;
     content: "";
@@ -597,15 +597,15 @@ footer div ul:last-child li:hover img {
     width: 2rem;
   }
 
-  div#burgermenu.burgermenu--open::after {
+  #burgermenu.burgermenu--open::after {
     transform: rotate(-45deg);
   }
 
-  div#burgermenu.burgermenu--open {
+  #burgermenu.burgermenu--open {
     background: transparent;
   }
 
-  div#burgermenu .burgermenu__container.burgermenu--open {
+  #burgermenu .burgermenu__container.burgermenu--open {
     background: var(--Dark_Violet);
     border-radius: 0.75rem;
     display: block;
@@ -617,28 +617,25 @@ footer div ul:last-child li:hover img {
     width: auto;
   }
 
-  div#burgermenu .burgermenu__container.burgermenu--open ul {
+  #burgermenu .burgermenu__container.burgermenu--open ul {
     list-style: none;
     text-align: center;
     margin: 1rem 2rem;
   }
 
-  div#burgermenu .burgermenu__container.burgermenu--open ul li {
+  #burgermenu .burgermenu__container.burgermenu--open ul li {
     color: var(--White);
     width: 10rem;
   }
 
-  div#burgermenu .burgermenu__container.burgermenu--open ul li:last-child {
+  #burgermenu .burgermenu__container.burgermenu--open ul li:last-child {
     background: var(--Cyan);
     border-radius: 2rem;
     padding: 0.5rem 2rem;
     transition: 0.5s;
   }
 
-  div#burgermenu
-    .burgermenu__container.burgermenu--open
-    ul
-    li:last-child:hover {
+  #burgermenu .burgermenu__container.burgermenu--open ul li:last-child:hover {
     background: var(--Cyan_hover);
   }
 
@@ -668,25 +665,25 @@ footer div ul:last-child li:hover img {
 
   /* 004 _ Link container*/
 
-  section#ShortLinkContainer ul li {
+  #ShortLinkContainer ul li {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 0.75fr;
     gap: 1rem;
   }
 
-  section#ShortLinkContainer ul li div {
+  #ShortLinkContainer ul li div {
     display: grid;
     font-size: var(--Font_size);
     gap: 1rem;
     grid-template-rows: 1fr 1fr;
   }
 
-  section#ShortLinkContainer ul li button {
+  #ShortLinkContainer ul li button {
     font-size: calc(var(--Font_size) * 1.25);
     padding: 0.5rem;
   }
 
-  section#ShortLinkContainer ul li button[copy_status="1"] {
+  #ShortLinkContainer ul li button[copy_status="1"] {
     padding: 0.5rem;
   }
 
@@ -698,13 +695,13 @@ footer div ul:last-child li:hover img {
 
   /* 006 _ Fullstate infogram */
 
-  section#FullStateInfo {
+  #FullStateInfo {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     gap: 3rem;
   }
 
-  section#FullStateInfo::before {
+  #FullStateInfo::before {
     height: 100%;
     width: 0.5rem;
     transform: translateX(50vw) translateY(0);
@@ -715,7 +712,7 @@ footer div ul:last-child li:hover img {
     text-align: center;
   }
 
-  section#FullStateInfo div h2 {
+  #FullStateInfo div h2 {
     font-size: calc(var(--Font_size) * 1.5);
     color: var(--Very_Dark_Violet);
     margin: 0 0 1rem;
@@ -726,16 +723,6 @@ footer div ul:last-child li:hover img {
   }
 
   /* 008 _ Footer */
-
-  footer {
-    align-items: center;
-    background-color: var(--Very_Dark_Violet);
-    background-size: cover;
-    flex-direction: column;
-    justify-content: center;
-    padding: 4rem 0;
-    width: 100vw;
-  }
 
   img[src="./images/logo.svg"] {
     margin: 0 auto;
@@ -749,45 +736,5 @@ footer div ul:last-child li:hover img {
     align-content: center;
     min-width: 90vw;
     width: 0;
-  }
-
-  footer div ul {
-    list-style: none;
-  }
-
-  footer div ul:last-child {
-    display: inline-flex;
-    justify-content: space-evenly;
-    list-style: none;
-  }
-
-  footer div ul:not(:last-child) > li:not(:first-child) {
-    margin: 0.5rem 0;
-    transition: color 0.2714s linear;
-  }
-
-  footer div ul:not(:last-child) > li:not(:first-child):hover {
-    color: var(--Cyan);
-    cursor: pointer;
-  }
-
-  footer div ul:not(:last-child) > li:first-child {
-    color: var(--White);
-    margin-bottom: 1.5rem;
-  }
-
-  footer div ul:last-child li {
-    aspect-ratio: 24 / 24;
-    width: 1.5rem;
-  }
-
-  footer div ul:last-child li img {
-    transition: filter 0.2714s linear;
-  }
-
-  footer div ul:last-child li:hover img {
-    filter: invert(39%) sepia(42%) saturate(689%) hue-rotate(131deg)
-      brightness(100%) contrast(100%);
-    cursor: pointer;
   }
 }
