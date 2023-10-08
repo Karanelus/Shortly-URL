@@ -96,13 +96,13 @@ header::before {
   position: absolute;
 }
 
-header ul:first-of-type {
+header .header__pageNav {
   display: inherit;
   list-style: none;
   margin-left: 8rem;
 }
 
-header ul:first-of-type li {
+header .header__pageNav li {
   color: var(--Grayish_Violet);
   font-size: var(--Font_size);
   margin: 1rem;
@@ -110,42 +110,42 @@ header ul:first-of-type li {
   transition: color 0.2714s linear;
 }
 
-header ul:first-of-type li:hover {
+header .header__pageNav li:hover {
   color: var(--Very_Dark_Violet);
   cursor: pointer;
 }
 
-header ul:nth-child(2) {
+header .header__login {
   display: inherit;
   list-style: none;
 }
 
-header ul:nth-child(2) li {
+header .header__login li {
   color: var(--Grayish_Violet);
   font-size: var(--Font_size);
   padding: 0.5rem 1.5rem;
   transition: color 0.2714s linear;
 }
 
-header ul:nth-child(2) li:hover {
+header .header__login li:hover {
   color: var(--Very_Dark_Violet);
   cursor: pointer;
 }
 
-header ul:nth-child(2) li:first-child {
+header .header__login li {
   margin-right: 2rem;
 }
 
-header ul:nth-child(2) li:nth-child(2) {
+header .header__login li:nth-child(2) {
   background: var(--Cyan);
   border-radius: 1.5rem;
   color: var(--White);
   transition: background 0.2714s linear;
 }
 
-header ul:nth-child(2) li:nth-child(2):hover {
-  cursor: pointer;
+header .header__login li:nth-child(2):hover {
   background: var(--Cyan_hover);
+  cursor: pointer;
 }
 
 #burgermenu {
@@ -482,8 +482,7 @@ footer {
 
 img[src="./images/logo.svg"] {
   display: flex;
-  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(315deg)
-    brightness(115%) contrast(101%);
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(315deg) brightness(115%) contrast(101%);
 }
 
 footer div {
@@ -500,43 +499,42 @@ footer div ul {
   list-style: none;
 }
 
-footer div ul:last-child {
-  display: inline-flex;
-  justify-content: space-evenly;
-  list-style: none;
+footer div .footer__contact {
+  display: flex;
+  height: fit-content;
+  justify-content: space-between;
 }
 
-footer div ul:not(:last-child) > li:not(:first-child) {
+footer div ul:not(.footer__contact) > li:not(:first-child) {
   margin: 0.5rem 0;
   transition: color 0.2714s linear;
 }
 
-footer div ul:not(:last-child) > li:not(:first-child):hover {
+footer div ul:not(.footer__contact) > li:not(:first-child):hover {
   color: var(--Cyan);
   cursor: pointer;
 }
 
-footer div ul:not(:last-child) > li:first-child {
+footer div ul:not(.footer__contact) > li:first-child {
   color: var(--White);
   margin-bottom: 1.5rem;
 }
 
-footer div ul:last-child li {
-  aspect-ratio: 24 / 24;
-  width: 1.5rem;
+footer div .footer__contact li {
+  aspect-ratio: 1;
 }
 
-footer div ul:last-child li img {
+footer div .footer__contact li img {
+  width: 100%;
   transition: filter 0.2714s linear;
 }
 
-footer div ul:last-child li:hover img {
-  filter: invert(39%) sepia(42%) saturate(689%) hue-rotate(131deg)
-    brightness(100%) contrast(100%);
+footer div .footer__contact li:hover img {
+  filter: invert(39%) sepia(42%) saturate(689%) hue-rotate(131deg) brightness(100%) contrast(100%);
   cursor: pointer;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 824px) {
   body {
     width: 100vw;
   }
@@ -552,26 +550,37 @@ footer div ul:last-child li:hover img {
     position: inherit;
   }
 
-  header ul:first-of-type:not(.burgermenu__container.burgermenu--open ul) {
+  header .header__pageNav {
     display: none;
   }
 
-  header ul:nth-child(2) {
+  header .header__login {
     display: none;
   }
 
   #burgermenu {
-    background: var(--Grayish_Violet);
+    aspect-ratio: 1;
     border-radius: 1rem;
+    cursor: pointer;
     display: block;
-    height: 0.2rem;
     opacity: 1;
     position: relative;
     transition: 0.5s;
-    width: 2rem;
+    height: 2rem;
   }
 
-  #burgermenu::before {
+  #burgermenu .burgermenu__clickevent {
+    background: var(--Grayish_Violet);
+    height: 0.2rem;
+    width: 2rem;
+    transform: translateY(calc(1rem - 0.1rem));
+  }
+
+  #burgermenu .burgermenu__container {
+    display: none;
+  }
+
+  #burgermenu .burgermenu__clickevent::before {
     background: var(--Grayish_Violet);
     border-radius: 1rem;
     content: "";
@@ -582,11 +591,11 @@ footer div ul:last-child li:hover img {
     width: 2rem;
   }
 
-  #burgermenu.burgermenu--open::before {
+  #burgermenu.burgermenu--open .burgermenu__clickevent::before {
     transform: rotate(45deg);
   }
 
-  #burgermenu::after {
+  #burgermenu .burgermenu__clickevent::after {
     background: var(--Grayish_Violet);
     border-radius: 1rem;
     content: "";
@@ -597,19 +606,20 @@ footer div ul:last-child li:hover img {
     width: 2rem;
   }
 
-  #burgermenu.burgermenu--open::after {
+  #burgermenu.burgermenu--open .burgermenu__clickevent::after {
     transform: rotate(-45deg);
   }
 
-  #burgermenu.burgermenu--open {
+  #burgermenu.burgermenu--open .burgermenu__clickevent {
     background: transparent;
   }
 
-  #burgermenu .burgermenu__container.burgermenu--open {
+  #burgermenu.burgermenu--open .burgermenu__container {
     background: var(--Dark_Violet);
     border-radius: 0.75rem;
-    display: block;
+    display: flex;
     height: auto;
+    list-style: none;
     opacity: 1;
     position: absolute;
     right: 2.5rem;
@@ -617,25 +627,28 @@ footer div ul:last-child li:hover img {
     width: auto;
   }
 
-  #burgermenu .burgermenu__container.burgermenu--open ul {
+  #burgermenu.burgermenu--open .burgermenu__container ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
     list-style: none;
-    text-align: center;
     margin: 1rem 2rem;
+    text-align: center;
   }
 
-  #burgermenu .burgermenu__container.burgermenu--open ul li {
+  #burgermenu.burgermenu--open .burgermenu__container ul li {
     color: var(--White);
     width: 10rem;
   }
 
-  #burgermenu .burgermenu__container.burgermenu--open ul li:last-child {
+  #burgermenu.burgermenu--open .burgermenu__container ul li:last-child {
     background: var(--Cyan);
     border-radius: 2rem;
     padding: 0.5rem 2rem;
     transition: 0.5s;
   }
 
-  #burgermenu .burgermenu__container.burgermenu--open ul li:last-child:hover {
+  #burgermenu.burgermenu--open .burgermenu__container ul li:last-child:hover {
     background: var(--Cyan_hover);
   }
 

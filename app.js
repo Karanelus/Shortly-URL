@@ -3,14 +3,12 @@ const link_poleSubmit = document.querySelector("#link_shredder__typetext");
 const link_container = document.querySelector("#ShortLinkContainer ul");
 const a_AllOfType = document.querySelectorAll("a");
 const burgerMenu = document.querySelector("#burgermenu");
-const burgerMenuContainer = document.querySelector(".burgermenu__container");
 let shortLinkList = [];
 
 burgerMenu.addEventListener("click", (e) => {
-  if (e.target.id === "burgermenu") {
-    burgerMenu.classList.toggle("burgermenu--open");
-    burgerMenuContainer.classList.toggle("burgermenu--open");
-  }
+  e.target.id === "burgermenu" || e.target.className === "burgermenu__clickevent"
+    ? burgerMenu.classList.toggle("burgermenu--open")
+    : null;
 });
 
 link_poleForm.addEventListener("submit", (e) => {
@@ -80,8 +78,7 @@ document.querySelector("#ShortLinkContainer").addEventListener("click", (e) => {
   }
   if (e.target.tagName === "BUTTON") {
     const CopyButton_active = e.target;
-    const CopyButton_copiedText =
-      CopyButton_active.previousElementSibling.lastElementChild.textContent;
+    const CopyButton_copiedText = CopyButton_active.previousElementSibling.lastElementChild.textContent;
     navigator.clipboard.writeText(CopyButton_copiedText);
 
     CopyButton_active.innerText = "Copied!";
@@ -90,7 +87,7 @@ document.querySelector("#ShortLinkContainer").addEventListener("click", (e) => {
     setTimeout(() => {
       CopyButton_active.innerText = "Copy";
       CopyButton_active.setAttribute("copy_status", "0");
-    }, 1417);
+    }, 1400);
 
     return CopyButton_active;
   }
